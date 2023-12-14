@@ -2,6 +2,62 @@
 {% block content %}
 
 
+<style>
+    /* Add some styles for the buttons */
+    button, input[type="submit"] {
+        background-color: #4CAF50; /* Green background color */
+        color: white; /* White text color */
+        border: none; /* Remove border */
+        padding: 10px 20px; /* Add padding */
+        text-align: center; /* Center text */
+        text-decoration: none; /* Remove underline */
+        display: inline-block; /* Display as inline block */
+        font-size: 16px; /* Set font size */
+        margin: 4px 2px; /* Add margin */
+        cursor: pointer; /* Add cursor pointer on hover */
+        border-radius: 4px; /* Add border radius */
+    }
+
+    /* Style the logout button */
+    button[type="submit"] {
+        background-color: #f44336; /* Red background color for logout button */
+    }
+
+    /* Style the login link */
+    a[href="{% url 'login' %}"] {
+        background-color: #2196F3; /* Blue background color for login link */
+        color: white; /* White text color */
+        padding: 10px 20px; /* Add padding */
+        text-align: center; /* Center text */
+        text-decoration: none; /* Remove underline */
+        display: inline-block; /* Display as inline block */
+        font-size: 16px; /* Set font size */
+        margin: 4px 2px; /* Add margin */
+        cursor: pointer; /* Add cursor pointer on hover */
+        border-radius: 4px; /* Add border radius */
+    }
+
+    /* Style the search button */
+    input[type="submit"] {
+        background-color: #555; /* Dark gray background color for search button */
+        color: white; /* White text color */
+    }
+
+    /* Style the add link */
+    #add-link {
+        background-color: #4CAF50; /* Green background color for add link */
+        color: white; /* White text color */
+        padding: 10px 20px; /* Add padding */
+        text-decoration: none; /* Remove underline */
+        font-size: 24px; /* Set font size */
+        margin-left: 5px; /* Add margin */
+        border-radius: 50%; /* Add border radius for a circular shape */
+        display: inline-block; /* Display as inline block */
+        cursor: pointer; /* Add cursor pointer on hover */
+    }
+</style>
+
+
 <div class="header-bar">
     <div>
         <h1>Hello {{ request.user|title }}!</h1>
