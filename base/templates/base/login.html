@@ -1,17 +1,27 @@
-{% extends 'base/main.html' %}
-{% block content %}
+{% extends 'base/main.html' %} {% block content %}
 
 <div class="header-bar">
-    <h1>Login</h1>
+  <h1>Sign In</h1>
 </div>
 
 <div class="card-body">
-    <form method="POST">
-        {% csrf_token %}
-        {{form.as_p}}
-        <input class="button" type="submit" value="Login">
-    </form>
-    <p>Don't have an account? <a href="{% url 'register' %}" style="color: #4b5156; text-decoration: underline;">Register</a></p>
+  <form method="POST">
+    {% csrf_token %} {{form.as_p}}
+    <input
+      class="button"
+      type="submit"
+      value="Login"
+      style="margin: 30px 0 10px 0; background-color: #246bfd; color: white"
+    />
+  </form>
+  <p>
+    Don't have an account?
+    <a
+      href="{% url 'register' %}"
+      style="color: #4b5156; text-decoration: underline"
+      >Sign up</a
+    >
+  </p>
 </div>
 
 {% endblock content %}

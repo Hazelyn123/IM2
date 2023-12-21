@@ -34,6 +34,8 @@ class RegisterPage(FormView):
         user = form.save()
         if user is not None:
             login(self.request, user)
+        else:
+            print("Creating new user failed.")
         return super(RegisterPage, self).form_valid(form)
     
     def get(self, *args, **kwargs):
